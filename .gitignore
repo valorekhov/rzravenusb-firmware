@@ -1,3 +1,6 @@
+bin/
+Debug/
+
 # Object files
 *.o
 *.ko
@@ -74,3 +77,4 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+*.atsuo
