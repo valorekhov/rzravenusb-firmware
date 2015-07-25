@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>6.2</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.C</ToolchainName>
+    <ProjectGuid>e75bb62f-192d-4eb0-ae06-bdf7f7040dbf</ProjectGuid>
+    <Name>RZUSBSTICK</Name>
+    <avrdevice>at90usb1287</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <AvrProjectType>Importer</AvrProjectType>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>RZUSBSTICK</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <avrtool>com.atmel.avrdbg.tool.atmelice</avrtool>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.19.0" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+    <com_atmel_avrdbg_tool_atmelice>
+      <ToolOptions>
+        <InterfaceProperties>
+          <JtagDbgClock>200000</JtagDbgClock>
+          <IspClock>125000</IspClock>
+        </InterfaceProperties>
+        <InterfaceName>JTAG</InterfaceName>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.atmelice</ToolType>
+      <ToolNumber>J41800004738</ToolNumber>
+      <ToolName>Atmel-ICE</ToolName>
+    </com_atmel_avrdbg_tool_atmelice>
+    <avrtoolinterface>JTAG</avrtoolinterface>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'default' ">
+    <OutputPath>bin\default\</OutputPath>
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>AVR</Value>
+            <Value>RZUSBSTICK</Value>
+            <Value>LITTLE_ENDIAN</Value>
+            <Value>RZRAVEN_FW_MAJ=1</Value>
+            <Value>RZRAVEN_FW_MIN=0</Value>
+            <Value>F_CPU=8000000UL</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>../configure\arch\avr\dev</Value>
+            <Value>../configure</Value>
+            <Value>../configure\ieee802_15_4</Value>
+            <Value>../configure\tat</Value>
+            <Value>../configure\vrt</Value>
+            <Value>../configure\zigbee</Value>
+            <Value>../include</Value>
+            <Value>../include\application\rzusbstick</Value>
+            <Value>../include\arch</Value>
+            <Value>../include\arch\avr</Value>
+            <Value>../include\ieee802_15_4</Value>
+            <Value>../include\tat</Value>
+            <Value>../include\vrt</Value>
+            <Value>../include\zigbee</Value>
+            <Value>../board</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.compiler.miscellaneous.OtherFlags>-gdwarf-2 -std=gnu99 -fdata-sections</avrgcc.compiler.miscellaneous.OtherFlags>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libc.a</Value>
+            <Value>libm.a</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.assembler.general.AssemblerFlags>-Wall -gdwarf-2 -std=gnu99 -DAVR    -DRZUSBSTICK  -DLITTLE_ENDIAN      -DRZRAVEN_FW_MAJ=1  -DRZRAVEN_FW_MIN=0     -ffunction-sections  -fdata-sections  -DF_CPU=8000000UL -Os -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -Wall -gdwarf-2 -std=gnu99 -DAVR    -DRZUSBSTICK  -DLITTLE_ENDIAN      -DRZRAVEN_FW_MAJ=1  -DRZRAVEN_FW_MIN=0     -ffunction-sections  -fdata-sections  -DF_CPU=8000000UL -Os -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums</avrgcc.assembler.general.AssemblerFlags>
+        <avrgcc.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>configure\arch\avr\dev</Value>
+            <Value>configure</Value>
+            <Value>configure\ieee802_15_4</Value>
+            <Value>configure\tat</Value>
+            <Value>configure\vrt</Value>
+            <Value>configure\zigbee</Value>
+            <Value>include</Value>
+            <Value>include\application\rzusbstick</Value>
+            <Value>include\arch</Value>
+            <Value>include\arch\avr</Value>
+            <Value>include\ieee802_15_4</Value>
+            <Value>include\tat</Value>
+            <Value>include\vrt</Value>
+            <Value>include\zigbee</Value>
+            <Value>board</Value>
+          </ListValues>
+        </avrgcc.assembler.general.IncludePaths>
+      </AvrGcc>
+    </ToolchainSettings>
+    <BuildTarget>all</BuildTarget>
+    <CleanTarget>clean</CleanTarget>
+  </PropertyGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+  <ItemGroup>
+    <Compile Include="air_capture.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="at24cxx.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cmd_if.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="eep.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ieee802_15_4.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ieee802_15_4_associate.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ieee802_15_4_beacon.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ieee802_15_4_cmd.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ieee802_15_4_data.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ieee802_15_4_disassociate.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ieee802_15_4_orphan.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ieee802_15_4_pib.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ieee802_15_4_poll.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ieee802_15_4_reset.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ieee802_15_4_rx_enable.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ieee802_15_4_scan.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ieee802_15_4_start.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="isr.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="rf230_avr.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="rzusbstick.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="tat_rf230.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="usb_descriptors.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="usb_drv.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="usb_specific_request.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="usb_standard_request.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="usb_task.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="vrt_kernel.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="vrt_mem.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="vrt_timer_avr.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="zigbee.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="zigbee_data.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="zigbee_discovery.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="zigbee_formation.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="zigbee_join.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="zigbee_leave.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="zigbee_neighbor_table.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="zigbee_nib.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="zigbee_permit_joining.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="zigbee_poll.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="zigbee_start_router.c">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
